@@ -1,0 +1,123 @@
+/* KiffTaVille — Pages de validation parentale
+ * Tokens design cohérents avec CLAUDE.md §7 (palette jeune dark mode).
+ * Public, auditable, zéro tracker. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: #0D0D14;
+  color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  width: 100%;
+  max-width: 480px;
+  background: #1A1A24;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border-left: 4px solid var(--accent, #9D4EDD);
+  animation: fadeIn 600ms ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main { animation: none; }
+}
+
+.brand {
+  display: block;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 12px;
+  color: #B8B8C8;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  line-height: 1.2;
+}
+
+.emoji {
+  font-size: 24px;
+  line-height: 1;
+}
+
+h3 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #B8B8C8;
+  font-weight: 700;
+  margin: 24px 0 8px;
+}
+
+p { margin: 0 0 12px; font-size: 15px; color: #FFFFFF; }
+p.muted { color: #B8B8C8; font-size: 14px; }
+p:last-of-type { margin-bottom: 0; }
+
+strong { font-weight: 700; color: #FFFFFF; }
+
+a {
+  color: #9D4EDD;
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover { text-decoration: underline; }
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 24px 0 0;
+}
+
+footer {
+  margin-top: 24px;
+}
+
+footer .slogan {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 11px;
+  color: #B8B8C8;
+  opacity: 0.5;
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+/* --- Accents sémantiques (border-left main + var --accent) ---------------- */
+.accent-mint   { --accent: #3DFFC8; }
+.accent-violet { --accent: #9D4EDD; }
+.accent-gold   { --accent: #FFC700; }
+.accent-red    { --accent: #FF4D6D; }
+.accent-pink   { --accent: #FF6B9D; }
+.accent-muted  { --accent: #5A5A6E; }
