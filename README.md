@@ -26,6 +26,7 @@ HTML5 + CSS pur + 1 fichier JS vanilla (~20 lignes). Pas de framework, pas de bu
 | `revoked.html` | Refus enregistré |
 | `expired.html` | Lien expiré (>48 h) |
 | `already-used.html` | Lien déjà utilisé |
+| `revocation-done.html` | Consentement révoqué post-validation (RGPD art. 7§3) |
 | `invalid.html` | Lien invalide / inconnu |
 | `error.html` | Erreur technique |
 | `method-not-allowed.html` | Appel HTTP non-GET (rare) |
